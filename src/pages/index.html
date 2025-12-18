@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>АВЗ | Домашняя страница</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__primary">
+                    <div class="header__logo">
+                        <a href="../pages/index.html" class="header__logo-link">
+                            <img class="header__logo-img" src="../icons/Logo.svg" alt="Логотип">
+                        </a>
+                    </div>
+                    <nav class="header__nav">
+                        <ul class="header__list">
+                            <li class="header__item">
+                                <a href="../pages/catalog.html" class="header__link txt-l1">Каталог</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="../pages/about.html" class="header__link txt-l1">О компании</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="../pages/contacts.html" class="header__link txt-l1">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__actions">
+                    <button class="btn btn-menu" popovertarget="header-menu">
+                        <img class="btn__icon" src="../icons/header-menu.svg" alt="Меню">
+                    </button>
+                    
+                    <a href="../pages/cart.html" class="btn btn-cart">
+                        <img class="btn__icon" src="../icons/header-cart.svg" alt="Корзина">
+                    </a>             
+                    <button class="btn btn-login btn_charcoal" popovertarget="header-login">
+                        <span class="btn__text txt-l1">Войти</span>
+                        <img class="btn__icon" src="../icons/header-login.svg" alt="Войти">
+                    </button>
+                </div>
+                <div id="header-menu" class="header__mobile-menu" popover>
+                    <ul class="header__mobile-list">
+                        <li class="header__mobile-item header__mobile-item_close">
+                            <button class="btn btn-close" popovertarget="header-menu">
+                                <img class="btn__icon" src="../icons/header-menu-close.svg" alt="Закрыть">
+                            </button>
+                        </li>
+                        <li class="header__mobile-item">
+                            <a href="../pages/catalog.html" class="header__mobile-link txt-l1">Каталог</a>
+                        </li>
+                        <li class="header__mobile-divider"><span></span></li>
+                        <li class="header__mobile-item">
+                            <a href="../pages/about.html" class="header__mobile-link txt-l1">О компании</a>
+                        </li>
+                        <li class="header__mobile-divider"><span></span></li>
+                        <li class="header__mobile-item">
+                            <a href="../pages/contacts.html" class="header__mobile-link txt-l1">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="header-login" class="auth-layer" popover>
+                    <div class="auth-popup">
+                        <div class="auth">
+                            <button class="btn btn_close" popovertarget="header-login">
+                                <img src="../icons/header-menu-close.svg" alt="Закрыть">
+                            </button>
+                            <div class="auth__image">
+                                <img src="../img/SignIn.webp" alt="Вход">
+                            </div>
+                            <div class="auth__content">
+                                <div class="auth__header">
+                                    <h3 class="txt-h3">Войти</h3>
+                                </div>
+                                <form action="?" method="GET" class="auth__form">
+                                    <div class="auth__fields">
+                                        <div class="auth__field">
+                                            <input class="auth__input" type="email" name="email" placeholder="Введите Email" required>
+                                        </div>
+                                        <div class="auth__field password__field">
+                                            <input class="auth__input" type="password" name="password" placeholder="Введите пароль" required>
+                                            <button type="button" class="btn btn_password">
+                                                <img src="../icons/sign-eye-close.svg" alt="Показать пароль">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="auth__submit btn btn_charcoal">Войти</button>
+                                </form>
+                                <div class="auth__footer">
+                                    <div class="auth__register">
+                                        <p class="auth__text txt-b2">У вас нет аккаунта?</p>
+                                        <button class="auth__link btn txt-b2" popovertarget="header-registration">Зарегистрироваться</button>
+                                    </div>
+                                    <a href="#" class="auth__forgot txt-b2">Забыли пароль?</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="header-registration" class="auth-layer" popover>
+                    <div class="auth-popup">
+                        <div class="auth">
+                            <button class="btn btn_close-reg" popovertarget="header-login">
+                                <img src="../icons/header-menu-close.svg" alt="Закрыть">
+                            </button>
+                            <div class="auth__content">
+                                <div class="auth__header">
+                                    <h3 class="txt-h3">Создайте аккаунт</h3>
+                                    <p class="txt-b2">Зарегистрируйтесь и откройте новые возможности в ветеринарной фармацевтике</p>
+                                </div>
+                                <form action="?" method="GET" class="auth__form">
+                                    <div class="auth__fields">
+                                        <div class="auth__field">
+                                            <input class="auth__input" type="text" name="name" placeholder="Введите Имя" required>
+                                        </div>
+                                        <div class="auth__field">
+                                            <input class="auth__input" type="email" name="email" placeholder="Введите Email" required>
+                                        </div>
+                                        <div class="auth__field password__field">
+                                            <input class="auth__input" type="password" name="password" placeholder="Введите пароль" required>
+                                            <button type="button" class="btn btn_password">
+                                                <img src="../icons/sign-eye-close.svg" alt="Пароль">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="auth__submit btn btn_charcoal">Зарегистрироваться</button>
+                                </form>
+                                <div class="auth__footer">
+                                    <p class="auth__forgot txt-b2">Продолжая, вы соглашаетесь с нашими <a href="#" class="txt-b2"><u>Условиями</u></a> и <a href="#" class="txt-b2"><u>Политикой конфиденциальности</u></a></p>
+                                    <div class="auth__register">
+                                        <p class="auth__text txt-b2">У вас уже есть аккаунт? </p>
+                                        <button class="auth__link btn txt-b2">Войти</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="auth__image">
+                                <img src="../img/SignUp.webp" alt="Вход">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container container--no-padding">
+            <section class="slider">
+                <h1 class="delete__item">БОЛЬШЕ НЕ КУСАЮТ</h1>
+                <div class="slider__slides">
+                    <img class="slider__img slider__img--active" src="../img/main-img-first.webp" alt="Средство от блох для собак">
+                    <img class="slider__img" src="../img/main-img-second.webp" alt="Корм для попугаев">
+                    <img class="slider__img" src="../img/main-img-third.webp" alt="Уход за дикими животными">
+                </div>
+                <div class="slider__content">
+                    <h2 class="general__title txt-h1">БОЛЬШЕ НЕ КУСАЮТ</h2>
+                    <p class="general__description txt-b1">
+                        Вши, блохи и клещи – паразиты, которые так и норовят атаковать вашего питомца. Как защитить четвероногого друга и при этом не навредить ему?
+                    </p>
+                    <a href="../pages/catalog.html" class="slider__button btn_mint">
+                        Узнать больше
+                    </a>
+                </div>
+                <div class="slider__controls">
+                    <span class="slider__line slider__line--active"></span>
+                    <span class="slider__line"></span>
+                    <span class="slider__line"></span>
+                </div>
+            </section>
+        </div>
+        <section class="production">
+            <div class="container">
+                <div class="content">
+                    <h2 class="general__title txt__bottom txt-h2">Производство ветеринарных препаратов</h2>
+                    <div class="production__cards">
+                        <div class="production__card">
+                            <a href="../pages/catalog.html" class="production__link">
+                                <h4 class="production__card-title txt-h4">Домашние животные</h4>
+                            </a>
+                            <img src="../img/production-img-first.webp" alt="Домашние животные">
+                        </div>
+                        <div class="production__card">
+                            <a href="../pages/catalog.html" class="production__link">
+                                <h4 class="production__card-title txt-h4">
+                                    <span class="production__title-desktop">Сельскохозяйственные животные</span>
+                                    <span class="production__title-mobile">Сельскохоз. животные</span>
+                                </h4>
+                            </a>
+                            <img src="../img/production-img-second.webp" alt="Сельскохозяйственные животные">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="advantages">
+            <div class="container">
+                <div class="content">
+                    <h2 class="general__title txt__bottom txt-h2">Наши преимущества</h2>
+                    <div class="advantages__cards">
+
+                        <div class="advantages__card">
+                            <div class="advantages__card-front">
+                                <img src="../img/advantages-img-first.webp" alt="Собственное производство" class="advantages__card-front-img">
+
+                                <div class="advantages__card-front-text">
+                                    <h4 class="advantages__card-front-title txt-h4">Собственное производство</h4>
+                                    <img src="../icons/advantages-svg-arrow.svg" class="card-icon" alt="Собственное производство">
+                                </div>
+                            </div>
+                            <div class="advantages__card-back">
+                                <div class="advantages__card-back-content">
+                                    <p class="txt-b1">Производство</p>
+                                    <h4 class="txt-h4">Собственное производство</h4>
+                                    <p class="txt-b1">- Современное оборудование и сертификат GMP.</p>
+                                    <p class="txt-b1">- Контрактное производство для партнёров.</p>
+                                    <img src="../img/advanteges-img-first-back.webp" class="advantages__card-back-img" alt="Собственное производство">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="advantages__card">
+                            <div class="advantages__card-front">
+                                <img src="../img/advantages-img-second.webp"
+                                    alt=""
+                                    class="advantages__card-front-img">
+
+                                <div class="advantages__card-front-text">
+                                    <h4 class="advantages__card-front-title txt-h4">Опытные сотрудники</h4>
+                                    <img src="../icons/advantages-svg-arrow.svg" class="card-icon" alt=">Опытные сотрудники">
+                                </div>
+                            </div>
+                            <div class="advantages__card-back">
+                                <div class="advantages__card-back-content">
+                                    <p class="txt-b1">Сотрудники</p>
+                                    <h4 class="txt-h4">Опытные сотрудники</h4>
+                                    <p class="txt-b1">- Современное оборудование и сертификат GMP.</p>
+                                    <p class="txt-b1">- Контрактное производство для партнёров.</p>
+                                    <img src="../img/advanteges-img-second-back.webp" class="advantages__card-back-img" alt=">Опытные сотрудники">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="advantages__card">
+                            <div class="advantages__card-front">
+                                <img src="../img/advantages-img-third.webp"
+                                    alt=""
+                                    class="advantages__card-front-img">
+
+                                <div class="advantages__card-front-text">
+                                    <h4 class="advantages__card-front-title txt-h4">Широкий ассортимент</h4>
+                                    <img src="../icons/advantages-svg-arrow.svg" class="card-icon" alt=">Широкий ассортимент">
+                                </div>
+                            </div>
+                            <div class="advantages__card-back">
+                                <div class="advantages__card-back-content">
+                                    <p class="txt-b1">Ассортимент</p>
+                                    <h4 class="txt-h4">Широкий ассортимент</h4>
+                                    <p class="txt-b1">- Современное оборудование и сертификат GMP.</p>
+                                    <p class="txt-b1">- Контрактное производство для партнёров.</p>
+                                    <img src="../img/advanteges-img-third-back.webp" class="advantages__card-back-img" alt="Широкий ассортимент">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="useful">
+            <div class="container">
+                <div class="content">
+                    <h2 class="general__title txt__bottom txt-h2">Полезное</h2>
+                    <div class="useful__cards">
+                        <div class="useful__card">
+                            <img src="../img/useful-img-first.webp" alt="Советы и статьи" class="useful__card-img">
+                            <div class="useful__card-title">
+                                <h4 class="txt-h4">Советы и статьи</h4>
+                                <p class="txt-b1">по уходу за животными</p>
+                            </div>
+                            <a href="#" class="useful__link btn_charcoal">Перейти</a>
+                        </div>
+
+                        <div class="useful__card">
+                            <img src="../img/useful-img-second.webp" alt="Семинары" class="useful__card-img">
+                            <div class="useful__card-title">
+                                <h4 class="txt-h4">Семинары</h4>
+                                <p class="txt-b1">для ветеринарных врачей</p>
+                            </div>
+                            <a href="#" class="useful__link btn_charcoal">Перейти</a>
+                        </div>
+
+                        <div class="useful__card">
+                            <img src="../img/useful-img-third.webp" alt="Награды и достижения" class="useful__card-img">
+                            <div class="useful__card-title">
+                                <h4 class="txt-h4">Награды и достижения</h4>
+                                <p class="txt-b1">компании агроветзащита</p>
+                            </div>
+                            <a href="#" class="useful__link btn_charcoal">Перейти</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="blog">
+            <div class="container">
+                <div class="content">
+                    <h2 class="general__title txt__bottom txt-h2 ">Блог</h2>
+                    <div class="blog__content">
+                        <div class="blog__content-link">
+                            <h2 class="txt-h4">Популярное</h2>
+                            <div class="blog__action">
+                            <a href="#" class="blog__link">
+                                    <p class="txt-b2">Читать все новости</p>
+                                    <img src="../icons/blog-svg-arrow.svg" alt="Здоровье ваших питомцев">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="blog__cards">
+                            <div class="blog__card">
+                                <div class="blog__news">
+                                    <img src="../img/blog-img-first.webp" alt="blog-img-first">
+                                    <p class="blog__card-title txt-b2">15 ИЮНЬ 2025 | ОТ AVZ</p>
+                                    <h2 class="txt-h4">Здоровье ваших питомцев</h2>
+                                    <p class="truncate txt-b2">
+                                        В мире, где забота о питомцах выходит на новый уровень, мы объединяем передовые научные разработки и многолетний опыт ветеринарии. Наши продукты и решения создаются в сотрудничестве с ведущими специалистами, проходят строгие испытания и соответствуют международным стандартам качества.
+                                    </p>
+                                </div>
+                                <a href="#" class="blog__link">
+                                    <p class="txt-b2">Читать далее</p>
+                                    <img src="../icons/blog-svg-arrow.svg" alt="Здоровье ваших питомцев">
+                                </a>
+                            </div>
+
+                            <div class="blog__card">
+                                <div class="blog__news">
+                                    <img src="../img/blog-img-second.webp" alt="blog-img-first">
+                                    <p class="blog__card-title txt-b2">23 АПРЕЛЬ 2024 | ОТ AVZ</p>
+                                    <h2 class="txt-h4">Новый корм для питомцев</h2>
+                                    <p class="truncate txt-b2">
+                                        Ученые разработали новый корм, обогащенный пробиотиками и натуральными антиоксидантами, который укрепляет иммунитет и улучшает пищеварение. Тестирование показало, что у животных, употребляющих этот корм, снижается риск аллергий и повышается активность.
+                                    </p>
+                                </div>
+                                <a href="#" class="blog__link">
+                                    <p class="txt-b2">Читать далее</p>
+                                    <img src="../icons/blog-svg-arrow.svg" alt="Новый корм для питомцев">
+                                </a>
+                            </div>
+
+                            <div class="blog__card">
+                                <div class="blog__news">
+                                    <img src="../img/blog-img-third.webp" alt="Болезнь у питомца?">
+                                    <p class="blog__card-title txt-b2">12 ИЮЛЬ 2023 | ОТ AVZ</p>
+                                    <h2 class="txt-h4">Болезнь у питомца?</h2>
+                                    <p class="truncate txt-b2">
+                                        Теперь следить за здоровьем питомца стало проще! Умные ошейники с датчиками пульса, GPS-трекерами и мониторингом активности помогают вовремя заметить тревожные симптомы и предотвратить болезни.
+                                    </p>
+                                </div>
+                                <a href="#" class="blog__link">
+                                    <p class="txt-b2">Читать далее</p>
+                                    <img src="../icons/blog-svg-arrow.svg" alt="Болезнь у питомца?">
+                                </a>
+                            </div>
+
+                            <div class="blog__card">
+                                <div class="blog__news">
+                                    <img src="../img/blog-img-fourth.webp" alt="Гипоаллергенные корма">
+                                    <p class="blog__card-title txt-b2">30 СЕНТЯБРЬ 2024 | ОТ AVZ</p>
+                                    <h2 class="txt-h4">Гипоаллергенные корма</h2>
+                                    <p class="truncate txt-b2">
+                                        Новая линейка витаминных комплексов на основе природных компонентов помогает поддерживать суставы, шерсть и сердце животных. Результаты исследований подтверждают: регулярный прием добавок увеличивает продолжительность жизни на 15-20%.
+                                    </p>
+                                </div>
+                                <a href="#" class="blog__link">
+                                    <p class="txt-b2">Читать далее</p>
+                                    <img src="../icons/blog-svg-arrow.svg" alt="Гипоаллергенные корма">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <div class="container contact__container">
+                <form class="contact__form" action="?" method="GET">
+                    <div class="contact__title">
+                        <h2 class="general__title txt-h2">Связаться с нами</h2>
+                        <p class="general__description txt-b1">
+                            Не стесняйтесь обращаться к нам в любое время. Мы скоро свяжимся с вами!
+                        </p>
+                    </div>
+                    <div class="contact__fields">
+                        <input class="contact__input txt-h4" type="text" name="name" placeholder="Имя" required>
+                        <input class="contact__input txt-h4" type="email" name="email" placeholder="Email" required>
+                        <textarea class="contact__input txt-h4 contact__msg" name="message" placeholder="Сообщение" required></textarea>
+                    </div>
+                    <button type="button" class="btn_mint" popovertarget="contact-feedback">Отправить</button>
+                </form>
+            </div>
+
+            <div class="contact-popup-bg" id="contact-feedback" popover>
+                <div class="contact-bg">
+                    <div class="contact-popup">
+                        <button class="btn btn_close" popovertarget="contact-feedback">
+                            <img src="../icons/header-menu-close.svg" alt="Закрыть">
+                        </button>
+                        <div class="contact__info">
+                            <h3 class="txt-h3">Спасибо за ваше сообщение!</h3>
+                            <p class="txt-b1">Мы получили ваше обращение и постараемся ответить как можно скорее.</p>
+                            <p class="txt-b1">Если у вас срочный вопрос, вы можете связаться с нами по телефону:<br>+7 (495) 648-26-26 или + 7 (495) 646-72-52</p>
+                            <p class="txt-b1">Хорошего дня!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="content">
+                <div class="footer__inner">
+                    <div class="footer__left">
+                        <a href="../pages/index.html" class="footer__link"><img src="../icons/Logo.svg" alt="footer-logo"></a>
+                        <p class="txt-b2">© 2025 ООО "НВЦ Агроветзащита". Все права защищены.</p>
+                        <div class="footer__social">
+                            <a href="https://ok.ru/avzvet"><img src="../icons/footer-svg-ok.svg" alt="Логотип Одноклассники"></a>
+                            <a href="https://vk.com/avzvet"><img src="../icons/footer-svg-vk.svg" alt="Логотип ВКонтакте"></a>
+                            <a href="https://t.me/avzvetru"><img src="../icons/footer-svg-tg.svg" alt="Логотип Телеграм"></a>
+                        </div>
+                    </div>
+                    <div class="footer__right">
+                        <div class="footer__column">
+                            <h4 class="footer__title txt-l1">О компании</h4>
+                            <ul class="footer__list">
+                                <li class="footer__item"><a href="../pages/about.html" class="footer__title-link txt-b2">Где купить</a></li>
+                                <li class="footer__item"><a href="../pages/about.html" class="footer__title-link txt-b2">АВЗ консалтинг</a></li>
+                                <li class="footer__item"><a href="../pages/about.html" class="footer__title-link txt-b2">Правила сайта</a></li>
+                                <li class="footer__item"><a href="../pages/about.html" class="footer__title-link txt-b2">Условия обработки cookie</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__column">
+                            <h4 class="footer__title txt-l1">Документы и помощь</h4>
+                            <ul class="footer__list">
+                                <li class="footer__item"><a href="../pages/contacts.html" class="footer__title-link txt-b2">Советы по уходу</a></li>
+                                <li class="footer__item"><a href="../pages/contacts.html" class="footer__title-link txt-b2">Контакты</a></li>
+                                <li class="footer__item"><a href="../pages/contacts.html" class="footer__title-link txt-b2">Покупка, доставка, оплата</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__column">
+                            <h4 class="footer__title txt-l1">Каталог</h4>
+                            <ul class="footer__list">
+                                <li class="footer__item"><a href="../pages/catalog.html" class="footer__title-link txt-b2">Защита от блох и клещей</a></li>
+                                <li class="footer__item"><a href="../pages/catalog.html" class="footer__title-link txt-b2">Уход за глазами</a></li>
+                                <li class="footer__item"><a href="../pages/catalog.html" class="footer__title-link txt-b2">Уход за ушами</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__column">
+                            <h4 class="footer__title txt-l1">Продукция</h4>
+                            <ul class="footer__list">
+                                <li class="footer__item"><a href="../pages/choice.html" class="footer__title-link txt-b2">Шампуни</a></li>
+                                <li class="footer__item"><a href="../pages/choice.html" class="footer__title-link txt-b2">Средства от глистов</a></li>
+                                <li class="footer__item"><a href="../pages/choice.html" class="footer__title-link txt-b2">Витамины и минералы</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+</html>

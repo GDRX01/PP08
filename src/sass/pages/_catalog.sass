@@ -1,0 +1,67 @@
+.catalog 
+    &__controls
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        gap: $gap4px
+        margin-bottom: 42px
+        button
+            position: relative
+            border-radius: 0
+            @include txt-h4
+            text-align: center
+            &::after
+                content: ""
+                position: absolute
+                left: 50%
+                bottom: -12px
+                transform: translateX(-50%) translateY(0px)
+                width: 0
+                height: 0px
+                border-left: 10px solid transparent
+                border-right: 10px solid transparent
+                border-top: 10px solid #000
+                opacity: 0
+                transition: all 0.2s ease
+            &:hover::after
+                opacity: 1
+                transform: translateX(-50%) translateY(0)
+
+    &__section
+        text-align: center
+        h4
+            margin-bottom: 16px
+
+    &__section-top
+        margin-bottom: 32px
+
+    &__cards
+        width: 100%
+        max-width: 588px
+        display: flex
+        flex-wrap: wrap
+        gap: $gap24px
+        margin: 0 auto
+        justify-content: center
+
+    &__card
+        width: fit-content
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+        box-shadow: $shadow
+        border-radius: $radius8px
+
+        img
+            border-radius: $radius8px
+
+        a
+            margin: 8px
+    
+    @media (max-width: 768px)
+        &__controls
+            margin-bottom: 32px
+            button:first-of-type
+                margin-bottom: 10px
+    

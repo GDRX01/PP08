@@ -1,0 +1,33 @@
+.contacts
+    h2
+        margin-bottom: 64px
+    span
+        width: 100%
+        display: flex
+        border: 1px solid $charcoal
+        margin: 32px 0
+    .txt_left
+        text-align: left
+    &__info
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between    
+        img
+            width: 100%
+            max-width: 690px
+            height: 358px
+            object-fit: cover
+    &__header
+        margin-bottom: 32px
+    &__detail-item:not(:last-child)
+        margin-bottom: 16px
+        h4
+            margin-bottom: 4px
+    &__item
+        margin-bottom: 0px
+        h4
+            margin-bottom: 4px
+
+    @media (max-width: 768px)
+        &__info
+            gap: $gap32px

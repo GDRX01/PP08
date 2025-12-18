@@ -1,0 +1,110 @@
+.choice
+    &__cards
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        gap: $gap24px
+        row-gap: 30px
+        margin-bottom: 48px
+
+    &__card
+        max-width: 384px
+        display: flex
+        flex-direction: column
+        text-align: center
+        gap: 15px
+
+    &__card-description
+        width: fit-content
+        padding: 6px 12px
+        border: 1px solid $charcoal
+        border-radius: $radius8px
+        margin: 0 auto
+
+    &__card-footer
+        display: flex
+        justify-content: center
+        gap: $gap16px
+        button
+            padding: 8px
+            border: 1px solid $charcoal
+
+
+        .choice__catalog-counter
+            display: flex
+            align-items: center
+            gap: $gap16px
+            padding: 6px 12px
+            border: 1px solid $charcoal
+            border-radius: $radius8px
+
+            img
+                width: 14px
+
+    &__pages
+        display: flex
+        flex-direction: column
+        text-align: center
+        p
+            margin-bottom: 8px
+    &__page
+        display: flex
+        justify-content: center
+        gap: $gap16px
+        button
+            @include txt-h4
+            padding: 6px 14px
+            border-radius: 0
+
+    @media (max-width: 768px)
+        .choice-popover__container
+            width: 100%
+            height: 100%
+            justify-content: center
+            padding: 0 32px
+        
+        .choice-popover__buttons
+            display: grid
+            gap: $gap8px
+            a
+                justify-content: center
+
+        &__page
+            gap: 8px
+        &__cards
+            gap: 27px
+        &__card
+            width: 312px
+            &-image
+                height: 234px
+            &-title
+                @include txt-b2
+
+// Popover
+
+.choice-popover
+    width: 100%
+    background: rgba(0, 0, 0, 0.05)
+
+    &__overlay
+        width: 100%
+        height: 100vh
+        display: flex
+        justify-content: center
+        align-items: center
+
+    &__container
+        padding: 64px 105px
+        background: $mint
+        margin: 0 auto
+        box-shadow: $shadow
+        display: flex
+        flex-direction: column
+        border-radius: $radius24px
+        text-align: center
+        gap: $gap32px
+
+    &__buttons
+        display: flex
+        gap: $gap16px
+        justify-content: center

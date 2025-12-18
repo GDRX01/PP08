@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>АВЗ | Корзина</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__primary">
+                    <div class="header__logo">
+                        <a href="../pages/index.html" class="header__logo-link">
+                            <img class="header__logo-img" src="../icons/Logo.svg" alt="Логотип">
+                        </a>
+                    </div>
+                    <nav class="header__nav">
+                        <ul class="header__list">
+                            <li class="header__item">
+                                <a href="../pages/catalog.html" class="header__link txt-l1">Каталог</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="../pages/about.html" class="header__link txt-l1">О компании</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="../pages/contacts.html" class="header__link txt-l1">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__actions">
+                    <button class="btn btn-menu" popovertarget="header-menu">
+                        <img class="btn__icon" src="../icons/header-menu.svg" alt="Меню">
+                    </button>
+                    
+                    <a href="../pages/cart.html" class="btn btn-cart">
+                        <img class="btn__icon" src="../icons/header-cart.svg" alt="Корзина">
+                    </a>             
+                    <button class="btn btn-login btn_charcoal" popovertarget="header-login">
+                        <span class="btn__text txt-l1">Войти</span>
+                        <img class="btn__icon" src="../icons/header-login.svg" alt="Войти">
+                    </button>
+                </div>
+                <div id="header-menu" class="header__mobile-menu" popover>
+                    <ul class="header__mobile-list">
+                        <li class="header__mobile-item header__mobile-item_close">
+                            <button class="btn btn-close" popovertarget="header-menu">
+                                <img class="btn__icon" src="../icons/header-menu-close.svg" alt="Закрыть">
+                            </button>
+                        </li>
+                        <li class="header__mobile-item">
+                            <a href="../pages/catalog.html" class="header__mobile-link txt-l1">Каталог</a>
+                        </li>
+                        <li class="header__mobile-divider"><span></span></li>
+                        <li class="header__mobile-item">
+                            <a href="../pages/about.html" class="header__mobile-link txt-l1">О компании</a>
+                        </li>
+                        <li class="header__mobile-divider"><span></span></li>
+                        <li class="header__mobile-item">
+                            <a href="../pages/contacts.html" class="header__mobile-link txt-l1">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="header-login" class="auth-layer" popover>
+                    <div class="auth-popup">
+                        <div class="auth">
+                            <button class="btn btn_close" popovertarget="header-login">
+                                <img src="../icons/header-menu-close.svg" alt="Закрыть">
+                            </button>
+                            <div class="auth__image">
+                                <img src="../img/SignIn.webp" alt="Вход">
+                            </div>
+                            <div class="auth__content">
+                                <div class="auth__header">
+                                    <h3 class="txt-h3">Войти</h3>
+                                </div>
+                                <form action="?" method="GET" class="auth__form">
+                                    <div class="auth__fields">
+                                        <div class="auth__field">
+                                            <input class="auth__input" type="email" name="email" placeholder="Введите Email" required>
+                                        </div>
+                                        <div class="auth__field password__field">
+                                            <input class="auth__input" type="password" name="password" placeholder="Введите пароль" required>
+                                            <button type="button" class="btn btn_password">
+                                                <img src="../icons/sign-eye-close.svg" alt="Показать пароль">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="auth__submit btn btn_charcoal">Войти</button>
+                                </form>
+                                <div class="auth__footer">
+                                    <div class="auth__register">
+                                        <p class="auth__text txt-b2">У вас нет аккаунта?</p>
+                                        <button class="auth__link btn txt-b2" popovertarget="header-registration">Зарегистрироваться</button>
+                                    </div>
+                                    <a href="#" class="auth__forgot txt-b2">Забыли пароль?</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="header-registration" class="auth-layer" popover>
+                    <div class="auth-popup">
+                        <div class="auth">
+                            <button class="btn btn_close-reg" popovertarget="header-login">
+                                <img src="../icons/header-menu-close.svg" alt="Закрыть">
+                            </button>
+                            <div class="auth__content">
+                                <div class="auth__header">
+                                    <h3 class="txt-h3">Создайте аккаунт</h3>
+                                    <p class="txt-b2">Зарегистрируйтесь и откройте новые возможности в ветеринарной фармацевтике</p>
+                                </div>
+                                <form action="?" method="GET" class="auth__form">
+                                    <div class="auth__fields">
+                                        <div class="auth__field">
+                                            <input class="auth__input" type="text" name="name" placeholder="Введите Имя" required>
+                                        </div>
+                                        <div class="auth__field">
+                                            <input class="auth__input" type="email" name="email" placeholder="Введите Email" required>
+                                        </div>
+                                        <div class="auth__field password__field">
+                                            <input class="auth__input" type="password" name="password" placeholder="Введите пароль" required>
+                                            <button type="button" class="btn btn_password">
+                                                <img src="../icons/sign-eye-close.svg" alt="Пароль">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="auth__submit btn btn_charcoal">Зарегистрироваться</button>
+                                </form>
+                                <div class="auth__footer">
+                                    <p class="auth__forgot txt-b2">Продолжая, вы соглашаетесь с нашими <a href="#" class="txt-b2"><u>Условиями</u></a> и <a href="#" class="txt-b2"><u>Политикой конфиденциальности</u></a></p>
+                                    <div class="auth__register">
+                                        <p class="auth__text txt-b2">У вас уже есть аккаунт? </p>
+                                        <button class="auth__link btn txt-b2">Войти</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="auth__image">
+                                <img src="../img/SignUp.webp" alt="Вход">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="cart">
+            <h1 class="delete__item">Корзина</h1>
+            <div class="container">
+                <div class="content">
+                    <h2 class="txt-h2">Корзина</h2>
+                    <div class="cart__cards">
+                        <div class="cart__card">
+                            <img src="../img/cart-img-first.webp" alt="Алезан Гель 2 в 1 охлаждающе-разогревающего действия" class="cart__card-image">
+                            <p class="txt-b1 cart__card-title">Алезан Гель 2 в 1 охлаждающе-разогревающего действия</p>
+                            <h4 class="txt-h4 cart__card-title">570 руб.</h4>
+                            <div class="cart__counter">
+                                <img src="../icons/icon-minus.svg" alt="Счетчик">
+                                <p class="txt-h4">1</p>
+                                <img src="../icons/icon_plus.svg" alt="Счетчик">
+                            </div>
+                            <button class="btn">
+                                <img src="../icons/header-menu-close.svg" alt="Закрыть">
+                            </button>
+                        </div>
+                        <div class="cart__card">
+                            <img src="../img/cart-img-second.webp" alt="Алезан Гель 2 в 1 охлаждающе-разогревающего действия" class="cart__card-image">
+                            <p class="txt-b1 cart__card-title">Алезан Гель 2 в 1 охлаждающе-разогревающего действия</p>
+                            <h4 class="txt-h4 cart__card-title">570 руб.</h4>
+                            <div class="cart__counter">
+                                <img src="../icons/icon-minus.svg" alt="Счетчик">
+                                <p class="txt-h4">1</p>
+                                <img src="../icons/icon_plus.svg" alt="Счетчик">
+                            </div>
+                            <button class="btn">
+                                <img src="../icons/header-menu-close.svg" alt="Закрыть">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cart__purchase">
+                        <div class="cart__purchase-info">
+                            <p class="txt-b2">Всего товаров на сумму:</p>
+                            <p class="txt-l1">6040 руб.</p>
+                        </div>
+                        <button class="btn btn_charcoal" popovertarget="cart-popup">
+                            Перейти к оформлению
+                        </button>
+                    </div>
+                    <div id="cart-popup" class="cart-popup-bg" popover>
+                        <div class="cart-popup">
+                            <form action="?" method="GET" class="cart__form">
+                                <h3 class="txt-h3">Оплата</h3>
+                                <div class="cart__field">
+                                    <input class="cart__input" type="number" name="number" placeholder="Номер карты (1234 1234 1234 1234)" required>
+                                </div>
+                                <div class="cart__field">
+                                    <input class="cart__input" type="number" name="number" placeholder="Окончание срока действия (ММ / ГГ)" required>
+                                    <input class="cart__input" type="number" name="number" placeholder="Код безопасности (CVC)" required>
+                                </div>
+                                <div class="cart__field">
+                                    <input class="cart__input" type="email" name="email" placeholder="Эл. Почта (Для получения чека)" required>
+                                </div>
+                                <button type="button" class="btn btn_charcoal" popovertarget="cart-popup">Оплатить</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="content">
+                <div class="footer__inner">
+                    <div class="footer__left">
+                        <a href="../pages/index.html" class="footer__link"><img src="../icons/Logo.svg" alt="footer-logo"></a>
+                        <p class="txt-b2">© 2025 ООО "НВЦ Агроветзащита". Все права защищены.</p>
+                        <div class="footer__social">
+                            <a href="https://ok.ru/avzvet"><img src="../icons/footer-svg-ok.svg" alt="Логотип Одноклассники"></a>
+                            <a href="https://vk.com/avzvet"><img src="../icons/footer-svg-vk.svg" alt="Логотип ВКонтакте"></a>
+                            <a href="https://t.me/avzvetru"><img src="../icons/footer-svg-tg.svg" alt="Логотип Телеграм"></a>
+                        </div>
+                    </div>
+                    <div class="footer__right">
+                        <div class="footer__column">
+                            <h4 class="footer__title txt-l1">О компании</h4>
+                            <ul class="footer__list">
+                                <li class="footer__item"><a href="../pages/about.html" class="footer__title-link txt-b2">Где купить</a></li>
+                                <li class="footer__item"><a href="../pages/about.html" class="footer__title-link txt-b2">АВЗ консалтинг</a></li>
+                                <li class="footer__item"><a href="../pages/about.html" class="footer__title-link txt-b2">Правила сайта</a></li>
+                                <li class="footer__item"><a href="../pages/about.html" class="footer__title-link txt-b2">Условия обработки cookie</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__column">
+                            <h4 class="footer__title txt-l1">Документы и помощь</h4>
+                            <ul class="footer__list">
+                                <li class="footer__item"><a href="../pages/contacts.html" class="footer__title-link txt-b2">Советы по уходу</a></li>
+                                <li class="footer__item"><a href="../pages/contacts.html" class="footer__title-link txt-b2">Контакты</a></li>
+                                <li class="footer__item"><a href="../pages/contacts.html" class="footer__title-link txt-b2">Покупка, доставка, оплата</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__column">
+                            <h4 class="footer__title txt-l1">Каталог</h4>
+                            <ul class="footer__list">
+                                <li class="footer__item"><a href="../pages/catalog.html" class="footer__title-link txt-b2">Защита от блох и клещей</a></li>
+                                <li class="footer__item"><a href="../pages/catalog.html" class="footer__title-link txt-b2">Уход за глазами</a></li>
+                                <li class="footer__item"><a href="../pages/catalog.html" class="footer__title-link txt-b2">Уход за ушами</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__column">
+                            <h4 class="footer__title txt-l1">Продукция</h4>
+                            <ul class="footer__list">
+                                <li class="footer__item"><a href="../pages/choice.html" class="footer__title-link txt-b2">Шампуни</a></li>
+                                <li class="footer__item"><a href="../pages/choice.html" class="footer__title-link txt-b2">Средства от глистов</a></li>
+                                <li class="footer__item"><a href="../pages/choice.html" class="footer__title-link txt-b2">Витамины и минералы</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+</html>

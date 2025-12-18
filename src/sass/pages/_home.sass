@@ -1,0 +1,409 @@
+// MAIN
+
+// Slider
+.slider
+    position: relative
+    width: 100%
+    height: 700px
+
+    &__slides
+        position: relative
+        width: 100%
+        height: 100%
+    
+    &__img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        opacity: 0
+        transition: opacity 1s ease
+        &--active
+            opacity: 1
+
+    &__content
+        position: absolute
+        top: 24px
+        bottom: 0
+        left: 0
+        right: 0
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        gap: $gap16px
+        text-align: center
+        p
+            max-width: 430px
+        *
+            color: $mint
+    
+    &__controls
+        position: absolute
+        bottom: 16px
+        left: 0
+        right: 0
+        display: flex
+        justify-content: center
+        gap: $gap24px
+
+    &__line
+        width: 55px
+        height: 3px
+        background: $charcoal
+        border-radius: 2px
+        cursor: pointer
+        transition: all 0.3s ease
+        &--active
+            background: $mint
+
+    @media (max-width: 768px)
+        &__content
+            p
+                max-width: 300px
+
+        &__content
+            top: 32px
+
+// Production
+
+.production
+    &__cards
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        gap: $gap24px
+
+    &__card 
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        background-color: $white
+        box-shadow: $shadow
+        width: fit-content
+        overflow: hidden
+        border-radius: $radius24px
+        img 
+            width: 100%
+            height: auto
+            object-fit: cover
+
+
+    &__card-title 
+        text-align: center
+        padding: 36px 16px
+
+
+    &__title-desktop 
+        display: inline
+
+
+    &__title-mobile 
+        display: none
+
+    @media (max-width: 768px)
+        &__title-desktop
+            display: none
+
+        &__title-mobile
+            display: inline
+
+// Advantages
+
+.advantages
+    &__cards
+        display: flex
+        justify-content: center
+        gap: $gap24px
+        flex-wrap: wrap
+
+    &__card
+        width: 384px
+        height: 500px
+        position: relative
+        box-shadow: $shadow
+        border-radius: $radius24px
+        cursor: pointer
+
+        &:hover .advantages__card-front
+            transform: rotateY(180deg)
+
+        &:hover .advantages__card-back
+            transform: rotateY(0)
+
+    &__card-front,
+    &__card-back
+        width: 100%
+        height: 100%
+        border-radius: $radius24px
+        backface-visibility: hidden
+        position: absolute
+        top: 0
+        left: 0
+        overflow: hidden
+        transition: transform 0.6s ease
+
+    &__card-front
+        background-color: $white
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        transform: rotateY(0deg)
+
+        &-img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            position: absolute
+            top: 0
+            left: 0
+
+        &-text
+            align-items: center
+            padding: 16px
+            position: relative
+            z-index: 2
+
+        &-title
+            color: $mint
+            padding: 8px 0
+
+    &__card-back
+        background-color: $white
+        transform: rotateY(180deg)
+        display: flex
+        align-items: flex-start
+        justify-content: center
+        padding: 16px
+        text-align: center
+        box-sizing: border-box
+
+        &-content
+            display: flex
+            flex-direction: column
+            gap: $gap8px
+
+        &-img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            margin-top: 16px
+
+    @media (max-width: 768px)
+        &__card
+            max-height: 405px
+        
+        &__card-front
+            &-text
+                padding: 12px
+            &-title
+                padding: 0
+
+// Useful
+.useful 
+    &__cards 
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-wrap: wrap
+        gap: $gap24px
+
+    &__card 
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: $gap16px
+        width: fit-content
+        padding: 16px
+        text-align: center
+        background-color: $white
+        border-radius: $radius24px
+        box-shadow: $shadow
+
+    &__card-img 
+        width: 100%
+        height: 300px
+        object-fit: cover
+        display: block
+        border-radius: $radius8px
+
+    &__card-title 
+        display: flex
+        flex-direction: column
+        align-items: center
+    
+// Blog
+
+.blog
+    &__content
+        display: flex
+        flex-direction: column
+        gap: $gap32px
+
+    &__content-link
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 0 120px
+
+    &__action
+        display: flex
+
+    &__link
+        display: flex
+        align-items: center
+        justify-content: end
+        gap: $gap4px
+        p
+            text-align: end
+
+    &__cards
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        gap: $gap24px
+
+    &__card
+        display: flex
+        flex-direction: column
+        gap: $gap4px
+        max-width: 282px
+
+    &__news
+        display: flex
+        flex-direction: column
+        gap: $gap4px
+
+        img
+            width: 100%
+            height: auto
+            border-radius: $radius24px $radius24px $radius24px 0
+            object-fit: cover
+
+    &__card-title
+        color: $moss
+
+    .truncate
+        display: -webkit-box
+        -webkit-box-orient: vertical
+        -webkit-line-clamp: 3
+        overflow: hidden
+        text-overflow: ellipsis
+
+    @media (max-width: 768px)
+        &__content-link
+            padding: 0
+
+
+// Contact
+
+
+.contact
+    background-image: url("../img/contact-img-BG.webp")
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 48px 0
+
+    &-popup-bg
+        width: 100%
+        height: 100%
+        background: rgba(0, 0, 0, 0.05)
+
+    &-bg
+        background: transparent
+        width: 100%
+        height: 100vh
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+    &-popup
+        margin: 0 auto
+        width: 693px
+        position: relative
+        text-align: center
+        background: $mint
+        box-shadow: $shadow
+        border-radius: $radius24px
+        padding: 164px 0
+        button
+            position: absolute
+            right: 0
+            top: 0
+            transform: translate(-50%, 50%)
+
+    &__container
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+
+    &__form
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+        max-width: 385px
+        min-height: 438px
+        justify-content: space-between
+        box-sizing: border-box
+
+    &__title
+        h2
+            margin-bottom: 4px
+
+        *
+            color: $mint
+
+    &__fields
+        display: flex
+        flex-direction: column
+        gap: $gap16px
+        width: 100%
+
+        .contact__msg
+            padding: 16px
+            min-height: 85px
+            resize: none
+            border-bottom: 1.5px solid $mint
+            background: transparent
+            color: $mint
+            font-family: $rubik
+            outline: none
+            align-content: center
+            scrollbar-color: $mint transparent
+
+    &__input
+        color: $mint
+        background: transparent
+        border: none
+        font-family: $rubik
+        border-bottom: 1.5px solid $mint
+        padding: 10px 0
+        text-align: center
+        outline: none
+
+        &::placeholder
+            color: $mint
+            font-family: $rubik
+
+    @media (max-width: 768px)
+        padding: 36px 0
+        &__info
+            padding: 32px
+        &__form
+            padding: 12px 0px
+        &-popup
+            display: flex
+            flex-direction: column
+            justify-content: center
+            height: 100%
+            margin: 0
+            width: 100%
+            border-radius: 0

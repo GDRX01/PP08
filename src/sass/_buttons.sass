@@ -1,0 +1,44 @@
+.btn
+    all: unset
+    cursor: pointer
+
+    &_charcoal
+        display: inline-flex
+        justify-content: space-between
+        padding: 10px 22px
+        border: 2px solid $charcoal
+        border-radius: $radius8px
+        font-family: $rubik
+        font-size: $fontsize14px
+        color: $charcoal
+        gap: $gap16px
+        background: transparent
+        line-height: $lineheight20px
+        transition: all 0.1s ease-in
+        cursor: pointer
+
+        &:hover
+            background-color: $charcoal
+            color: $mint
+            span
+                color: $mint
+            img
+                filter: brightness(0) saturate(100%) invert(98%) sepia(5%) saturate(427%) hue-rotate(56deg) brightness(104%) contrast(101%) 
+    &_mint
+        display: inline-flex
+        justify-content: space-between
+        padding: 10px 22px
+        border: 2px solid $mint
+        border-radius: $radius8px
+        font-family: $rubik
+        font-size: $fontsize14px
+        color: $mint
+        gap: $gap16px
+        background: transparent
+        line-height: $lineheight20px
+        transition: all 0.1s ease-in
+        cursor: pointer
+
+        &:hover
+            background-color: $mint
+            color: $charcoal

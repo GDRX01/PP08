@@ -1,0 +1,176 @@
+.header
+    padding: 8px 0
+    &__inner, &__primary, &__list, &__mobile-list
+        display: flex
+
+    &__nav
+        display: flex
+        align-items: center
+        
+    &__inner
+        justify-content: space-between
+        max-height: 56px
+
+    &__primary, &__list
+        gap: $gap32px
+
+    &__actions
+        display: flex
+        align-items: center
+        gap: $gap16px
+        .btn-menu
+            display: none
+
+    &__mobile-menu
+        width: 100%
+        padding: 32px 0
+        border-radius: 0 0 0 $radius24px
+        background-color: $mint
+
+    &__mobile-item
+        &_close
+            display: flex
+            justify-content: end
+
+    &__mobile-list
+        flex-direction: column
+        padding: 16px 32px
+        gap: $gap16px
+
+    &__mobile-divider
+        span
+            display: block
+            border: 1px solid $charcoal
+            width: 100%
+            
+    @media (max-width: 768px)
+        &__nav
+            display: none
+        .btn
+            &-cart
+                display: none
+            &-menu
+                display: block
+            &-login
+                border-radius: $radius24px
+                padding: 10px 12px
+                span
+                    display: none
+
+//  Auth Form
+.auth-layer
+    background: transparent
+    width: 100%
+    height: 100%
+
+.auth-popup
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, 0.05)
+
+.auth
+    position: relative
+    .btn_close
+        position: absolute
+        right: 0
+        transform: translateX(-50%)
+    .btn_close-reg
+        position: absolute
+        left: 0
+        transform: translateX(50%)
+
+    margin: 0px auto
+    display: flex
+    border-radius: $radius24px
+    gap: $gap16px
+    padding: 16px
+    box-shadow: $shadow
+    background: $mint
+
+    &__image
+        img
+            width: 100%
+            height: 100%
+    
+    &__content
+        display: flex
+        flex-direction: column
+        justify-content: center
+        gap: $gap24px
+        padding: 0 90px
+    
+    &__header, &__footer
+        width: 300px
+        display: flex
+        flex-direction: column
+        gap: $gap24px
+        text-align: center
+
+    &__fields
+        display: flex
+        flex-direction: column
+        gap: $gap32px
+        
+    &__field
+        display: flex
+    
+    form
+        display: flex
+        flex-direction: column
+        text-align: center
+        gap: 24px
+
+        input
+            all: unset
+            display: block
+            padding: 12px 32px 12px 16px
+            border-bottom: 1.5px solid $charcoal
+            text-align: start
+            flex: 1
+            &::placeholder
+                font-weight: $light
+        button
+            justify-content: center
+
+
+        .password__field
+            position: relative
+            display: flex
+
+            .btn_password
+                position: absolute
+                top: -10%
+                bottom: 0
+                right: 0
+                transform: translateX(-85%)
+    
+    &__register
+        display: flex
+        justify-content: center
+        gap: 4px
+    
+    @media (max-width: 1024px)
+        &
+            display: grid
+            margin: 0
+            border-radius: 0
+            gap: 0
+            padding: 0
+            height: 100%
+            &-popup
+                display: block
+            .btn_close
+                transform: translate(-50%, 50%)
+            .btn_close-reg
+                transform: translate(50%, 50%)
+            &__image
+                display: none
+            &__header, &__footer
+                width: 100%
+            &__register
+                display: block
+            &__content
+                padding: 16px

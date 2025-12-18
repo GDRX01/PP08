@@ -1,0 +1,53 @@
+// SASS IMPORT
+@import '_variables'
+@import '_buttons'
+@import '_fonts'
+
+// SASS LAYOUT
+@import 'layout/_header'
+@import 'layout/_footer'
+
+// PAGES
+@import 'pages/_home'
+@import 'pages/_catalog'
+@import 'pages/_about'
+@import 'pages/_contacts'
+@import 'pages/_cart'
+@import 'pages/_choise'
+
+html
+    scroll-behavior: smooth
+
+body
+    font-family: $rubik
+    background-color: $mint
+
+.container
+    max-width: 1200px
+    padding: 0 24px
+    margin: 0 auto
+
+.container--no-padding
+    padding: 0
+
+.content
+    padding: 48px 0
+
+a
+    text-decoration: none
+
+.txt__bottom
+    margin-bottom: 64px
+    text-align: center
+
+.delete__item
+    display: none
+
+@media ( max-width: 768px)
+    .general__title
+        font-size: $fontsize28px
+        line-height: $lineheight40px
+
+    .general__description
+        font-size: $fontsize14px
+        line-height: $lineheight22px
